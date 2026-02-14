@@ -1,0 +1,120 @@
+[project]
+name = "python-playground"
+version = "0.1.0"
+description = "Python playground"
+requires-python = ">=3.14"
+dependencies = [
+    "black>=26.1.0",
+]
+
+[dependency-groups]
+dev = [
+    "darglint>=1.8.1",
+    "flake8-annotations>=3.2.0",
+    "flake8-bandit>=4.1.1",
+    "flake8-broken-line>=1.0.0",
+    "flake8-bugbear>=25.11.29",
+    "flake8-builtins>=3.1.0",
+    "flake8-commas>=4.0.0",
+    "flake8-comprehensions>=3.17.0",
+    "flake8-django>=1.1.1",
+    "flake8-eradicate>=1.5.0",
+    "flake8-fixme>=1.1.1",
+    "flake8-isort>=7.0.0",
+    "flake8-logging-format>=2024.24.12",
+    "flake8-multiline-containers>=0.0.19",
+    "flake8-mutable>=1.2.0",
+    "flake8-no-implicit-concat>=0.3.7",
+    "flake8-pep3101>=3.0.0",
+    "flake8-pie>=0.16.0",
+    "flake8-printf-formatting>=1.1.2",
+    "flake8-pytest-style>=2.2.0",
+    "flake8-quotes>=3.4.0",
+    "flake8-return>=1.2.0",
+    "flake8-rst-docstrings>=0.4.0",
+    "flake8-string-format>=0.3.0",
+    "flake8-todos>=0.3.1",
+    "flake8-variables-names>=0.0.6",
+    "flakehell>=0.9.0",
+    "pep8-naming>=0.15.1",
+]
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+skip-string-normalization = false
+
+[tool.flakehell]
+exclude = ['.venv/']
+extended_default_ignore=[]
+max_line_length = 100
+format='colored'
+show_source = true
+
+[tool.flakehell.plugins]
+flake8-annotations = [
+    '+*',
+    '-ANN101',
+    '-ANN102',
+    '-ANN002',
+    '-ANN003',
+    '-ANN204',
+]
+flake8-quotes = ['+*', '-Q003']
+flake8-docstrings = ['+*', '-D400']
+cohesion = ['+*']
+flake8-bandit = ['+*']
+flake8-broken-line = ['+*']
+flake8-bugbear = ['+*']
+flake8-builtins = ['+*']
+flake8-commas = ['+*']
+flake8-comprehensions = ['+*']
+flake8-darglint = ['+*']
+flake8-debugger = ['+*']
+flake8-django = ['+*']
+flake8-eradicate = ['+*']
+flake8-fixme = ['+*']
+flake8-isort = ['+*']
+flake8-logging-format = ['+*']
+flake8-multiline-containers = ['+*']
+flake8-mutable = ['+*']
+flake8-pep3101 = ['+*']
+flake8-pie = ['+*']
+flake8-printf-formatting = ['+*']
+flake8-pytest-style = ['+*']
+flake8-return = ['+*']
+flake8-rst-docstrings = ['+*']
+flake8-string-format = ['+*']
+flake8-todos = ['+*']
+flake8-variables-names = ['+*']
+flake8-no-implicit-concat = ['+*']
+mccabe = ['+*']
+pep8-naming = ['+*']
+pycodestyle = ['+*', '-W503']
+pyflakes = ['+*']
+pylint = ['+*']
+
+[tool.isort]
+length_sort = true
+combine_as_imports = true
+lines_after_imports = 2
+include_trailing_comma = true
+multi_line_output = 3
+indent = 4
+
+known_django = 'django'
+sections = 'STDLIB,DJANGO,THIRDPARTY,FIRSTPARTY,LOCALFOLDER'
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+no_implicit_optional = true
+strict_optional = true
+check_untyped_defs = true
+disallow_untyped_defs = true
+ignore_missing_imports = true
+pretty = true
+
