@@ -1,12 +1,9 @@
-name = 'Alice'
-print(name, type(name))
+correct_name = 'Jerry'
+name = (input('Enter your name:'))
+print(name)
 
-is_student = True
-print(is_student, type(is_student))
+if name == correct_name:
+    print('Access Granted')
+else:
+    print('Access Denied')
 
-age = 20
-print(age, type(age))
-
-score = 80.5
-print(isinstance(score, float))
-print(score, type(score))

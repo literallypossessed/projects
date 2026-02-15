@@ -1,7 +1,7 @@
 [project]
-name = "python-playground"
+name = "python-projects"
 version = "0.1.0"
-description = "Python playground"
+description = "Python Projects"
 requires-python = ">=3.14"
 dependencies = [
     "black>=26.1.0",
