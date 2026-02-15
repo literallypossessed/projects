@@ -1,2 +1,2 @@
 # About
-This is my first python project.
+New to developing. Very exited to see where it takes me!!! 
